@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: blogapp-ingress
+spec:
+  rules:
+    - host: your-blogapp-domain.com  # Replace with your domain
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: blogapp-service  # Replace with your service name
+                port:
+                  number: 80  # Port where your application is exposed

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blogapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: blogapp
+  template:
+    metadata:
+      labels:
+        app: blogapp
+    spec:
+      containers:
+      - name: blogapp-container
+        image: jadynb/assignment4:version1
+        ports:
+        - containerPort: 3000  # Adjust port if your app uses a different one
+        env:
+        - name: DYNAMODB_ENDPOINT
+          value: dynamodb.us-east-1.amazonaws.com
+        # Add other environment variables if needed

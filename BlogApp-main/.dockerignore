@@ -1,0 +1,16 @@
+# Start with ignoring everything
+*
+
+# Add what we need to include
+
+!controllers/*
+!models/*
+!middleware/*
+!public/*
+!routes/*
+!views/*
+!config/*
+!app.js
+!package.json
+!package-lock.json
+!tests/*

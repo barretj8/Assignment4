@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blogapp-service
+spec:
+  selector:
+    app: blogapp
+  ports:
+    - protocol: TCP
+      port: 80  # External port to access your application
+      targetPort: 3000  # Port on the container where your app is listening
+  type: LoadBalancer  # Expose your service outside the cluster
