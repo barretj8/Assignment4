@@ -7,7 +7,7 @@ COPY ./package.json ./
 RUN npm install
 
 # Install aws-sdk
-RUN npm install aws-sdk
+RUN npm install aws-sdk dynamoose
 
 COPY ./ ./
 

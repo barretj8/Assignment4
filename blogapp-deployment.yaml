@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: blogapp-container
-        image: jadynb/assignment4:version1
+        image: jadynb/assignment4:version2
         ports:
         - containerPort: 3000  # Adjust port if your app uses a different one
         env:
